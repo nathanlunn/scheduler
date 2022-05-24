@@ -2,7 +2,7 @@ import {useState, useEffect} from 'react';
 import axios from 'axios';
 import { getAppointmentsForDay } from "helpers/selectors";
 
-export default function useApplicationData() {
+export default function useApplicationData() {  
   const [ state, setState] = useState({
     day: "Monday",
     days: [],
@@ -31,9 +31,11 @@ export default function useApplicationData() {
 
     const appointmentIds = selectedDay.appointments
 
-    const spots = appointmentIds.filter(id => !appointments[id].interview).length
+    const spotsArray = appointmentIds.filter(id => !appointments[id].interview)
 
-    return spots
+    const spotsNum = spotsArray.length
+
+    return spotsNum;
   }
 
   const updatedSpots = (state, appointments) => {
@@ -47,9 +49,8 @@ export default function useApplicationData() {
     const updatedDayIndex = state.days.findIndex(day => day.name === state.day);
 
     updatedDays[updatedDayIndex] = updatedDay;
-    updatedState.days = updatedDays;
     
-    return updatedState.days;
+    return updatedDays;
   }
 
   const setDay = day => setState(prev => ({...prev, day: day }));
@@ -69,7 +70,7 @@ export default function useApplicationData() {
 
         const newDays = updatedSpots(state, appointments);
 
-        setState({...state, days: newDays, appointments})
+        setState({...state, days: newDays, appointments});
       })
   }
 
