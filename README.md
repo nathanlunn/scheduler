@@ -39,3 +39,10 @@ npm test
 ```sh
 npm run storybook
 ```
+---
+
+## Screenshots
+
+!['Home Page'](https://github.com/nathanlunn/scheduler/blob/master/docs/home-page.png?raw=true)
+!['Appointment Form'](https://github.com/nathanlunn/scheduler/blob/master/docs/appointment-form.png?raw=true)
+!['Hover over Appointment'](https://github.com/nathanlunn/scheduler/blob/master/docs/appointment:hover.png?raw=true)
