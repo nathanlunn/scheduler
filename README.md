@@ -2,6 +2,14 @@
 
 **Version 1.0.0**
 
+---
+
+## Contributors
+
+- Nathan Lunn <nathandougalslunn@gmail.com>
+
+---
+
 ## Setup
 
 Install dependencies with `npm install`.
