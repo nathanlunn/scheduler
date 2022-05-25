@@ -1,12 +1,10 @@
-import React, { useState, useEffect } from "react";
-import axios from 'axios';
+import React from "react";
 
 import DayList from "./DayList";
 import Appointment from './Appointment/index';
 import useApplicationData from '../hooks/useApplicationData';
 import "components/Application.scss";
 import { getAppointmentsForDay, getInterview, getInterviewersForDay } from "helpers/selectors";
-import useVisualMode from "hooks/useVisualMode";
 
 export default function Application(props) {
   const {

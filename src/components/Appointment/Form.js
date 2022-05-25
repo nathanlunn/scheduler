@@ -34,7 +34,7 @@ export default function Form(props) {
       return;
     }
 
-    setError('')
+    setError('');
     props.onSave(student, interviewer);
   }
 
@@ -66,5 +66,5 @@ export default function Form(props) {
         </section>
       </section>
     </main>
-  )
-}
+  );
+};

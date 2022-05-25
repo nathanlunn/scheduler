@@ -1,5 +1,7 @@
 # Interview Scheduler
 
+**Version 1.0.0**
+
 ## Setup
 
 Install dependencies with `npm install`.
