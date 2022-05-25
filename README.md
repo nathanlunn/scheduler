@@ -10,6 +10,14 @@
 
 ---
 
+## About
+
+Interview Scheduler allows the user to create appointments between Monday and Friday by giving their name and selecting an available interviewer.
+
+This application can help both interviewers and interviewees keep better track of the appointments they've have made, making the need for those awkward apologies form missing an appointment obsolete!
+
+---
+
 ## Setup
 
 Install dependencies with `npm install`.
