@@ -9,6 +9,7 @@ export default function useApplicationData() {
     interviewers: {}
   });
 
+  // populate the state object with the data fetched from the api
   useEffect(() => {
     Promise.all([
       axios.get('/api/days'),
@@ -21,6 +22,7 @@ export default function useApplicationData() {
     })
   }, [])
 
+  // count the number of null interviews in a day's appointments
   const countSpots = (state) => {
     const { day, days, appointments } = state;
 
@@ -35,6 +37,7 @@ export default function useApplicationData() {
     return spotsNum;
   }
 
+  // return a state.days copy with an updated states.day.spots value
   const updatedSpots = (state, appointments) => {
     const updatedState = {...state, appointments};
     const updatedDays = [...state.days];
@@ -50,8 +53,10 @@ export default function useApplicationData() {
     return updatedDays;
   }
 
+  // set the state.day to the day that has been clicked by the user
   const setDay = day => setState(prev => ({...prev, day: day }));
 
+  // update a new value of interview in the api and state
   function bookInterview(id, interview) {
     return axios.put(`/api/appointments/${id}`, {interview})
       .then(() => {
@@ -71,6 +76,7 @@ export default function useApplicationData() {
       })
   }
 
+  // set a null value to an interview in the api and state
   function deleteInterview(id) {
     return axios.delete(`/api/appointments/${id}`)
       .then(() => {
