@@ -14,13 +14,15 @@ export default function Application(props) {
     deleteInterview,
   } = useApplicationData();
 
-
+  // grab list of interviewers that are found in the selected day's interviewer array
   const interviewers = getInterviewersForDay(state, state.day);
 
   let dailyAppointments = [];
 
+  // grav list of appointments that are found in the selected day's appointments array
   dailyAppointments = getAppointmentsForDay(state, state.day);
 
+  // create an array of appointment componenents for each appointment found
   const appointmentsArray = dailyAppointments.map(appointment => {
 
     const interview = getInterview(state, appointment.interview)

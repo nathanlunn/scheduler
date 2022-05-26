@@ -4,7 +4,7 @@ import 'components/InterviewerList.scss';
 import PropTypes from 'prop-types';
 
 export default function InterviewerList(props) {
-  
+  // create an InterviewerListItem component for each interviewer in the interviewers array prop
   const interviewersArray = props.interviewers.map(interviewer => {
     return (
       <InterviewerListItem
@@ -27,7 +27,7 @@ export default function InterviewerList(props) {
   );
 
 }
-
+// test to make sure the interviewers prop is an array
 InterviewerList.propTypes = {
   interviewers: PropTypes.array.isRequired
 };

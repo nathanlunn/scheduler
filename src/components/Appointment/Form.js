@@ -12,17 +12,20 @@ export default function Form(props) {
     return setStudent(event.target.value)
   }
 
+  // clear the student input field and unselect any selected interviewer
   const reset = () => {
     setStudent('');
     setInterviewer(null);
   }
 
+  // use reset, setError, and the given onCancel function to clear any alterations made in the form 
   const cancel = () => {
     reset();
     setError('');
     props.onCancel();
   }
 
+  // validate that the student input field isn't blank and that a interviewer has been selected
   function validate() {
     if (student === "") {
       setError("Student name cannot be blank");

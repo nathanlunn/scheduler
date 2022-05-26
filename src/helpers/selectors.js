@@ -1,3 +1,4 @@
+//Find the appointments that match the selected day's appointments array
 export function getAppointmentsForDay(state, day) {
   const { days, appointments } = state;
 
@@ -11,6 +12,7 @@ export function getAppointmentsForDay(state, day) {
   return daysAppointment;
 }
 
+// create an interview object
 export function getInterview(state, interview) {
   if (!interview) {
     return null;
@@ -23,6 +25,7 @@ export function getInterview(state, interview) {
   return interviewObject;
 }
 
+//Find the interviewers that match the selected day's interviewers array
 export function getInterviewersForDay(state, day) {
   const { days, interviewers } = state;
 
