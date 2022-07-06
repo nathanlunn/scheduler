@@ -41,7 +41,7 @@ npm run storybook
 ```
 ---
 
-## Screenshots
+## Application Screenshots
 
 !['Home Page'](https://github.com/nathanlunn/scheduler/blob/master/docs/home-page.png?raw=true)
 !['Appointment Form'](https://github.com/nathanlunn/scheduler/blob/master/docs/appointment-form.png?raw=true)
